@@ -19,16 +19,7 @@ function print(message) {
 }
 
 newGame();
-// let winningScore = document.getElementsByClassName('winning-score').value;
-// function clicked () {
 
-//What happens when the button is clicked
-
-// function setScore() {
-//     let winningScore = document.getElementById('score-input').value;
-//     console.log(winningScore);
-// }
-// Sets the winning score to either default winningScore[0] or user input winningScore[1]
 function setScore() {
     // if(document.getElementById('score-input').value === 
     if (document.getElementById('score-input').value > 0) {
@@ -132,20 +123,11 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         previousRoll = currentRoll;
         currentRoll = dice;
 
-        // console.log('The previous roll was ' + previousRoll);
-        // console.log('The current roll is ' + currentRoll);
-
         // 2. Display the dice
         let diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
 
-        // Checks to see if two 6's have been rolled
-
-        // if (currentRoll === 6 && previousRoll === 6) {
-        //     console.log('yes');
-        //     scores[activePlayer] = 0;
-        // }
 
 
         // 3. Display the round score only if the round score was not 1
@@ -156,16 +138,11 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
                 document.getElementById('message' + activePlayer).textContent = 'You rolled a double 6!';
                 document.getElementById('message' + activePlayer).style.display = 'inline';
 
-
+                // IF PLAYER ROLLS DOUBLE 6 - A MESSAGE IS DISPLAYED
                 console.log('Active player is ' + activePlayer + ' You rolled a 6 & 6. The previous roll was ' + previousRoll + 'The current roll is ' + currentRoll);
                 scores[activePlayer] = 0;
                 document.querySelector('#score-' + activePlayer).textContent = '0';
 
-                // IF PLAYER ROLLS DOUBLE 6 - A MESSAGE IS DISPLAYED
-
-
-
-                //
                 console.log('You rolled a double 6');
 
                 // Changes turn to next Player
@@ -245,6 +222,10 @@ function nextPlayer() {
     // Changes the active player
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
+    // If a you rolled one message is displayed - hide the message
+    if (document.getElementById('message' + activePlayer).style.display === 'inline') {
+        document.getElementById('message' + activePlayer).style.display = 'none'
+    }
 
     // Swapping the active class
     document.querySelector('.player-0-panel').classList.toggle('active');
@@ -265,51 +246,4 @@ function resetName() {
 document.querySelector('.btn-new').addEventListener('click', newGame);
 
 
-/****************************************
-CODE CHALLENGES
-****************************************/
 
-//Challenge 1
-
-//1. Player rolls 6 
-// two variables - last roll  and current roll
-// current round score = current roll + last roll + any previous rolls
-//if previous roll === 6 && current roll === 6 // player score[activePlayer] = 0;  // DONE
-// if not then active score should be 
-//2. player rolls 6 again
-//3. Player loses all their score
-//
-
-
-
-
-
-
-
-
-
-
-// document.querySelector('#btn-hold').addEventListener('click', function () {
-//     // Figure out current player
-
-
-//     // Add scores to global score // score[0] or score[1]
-//     score[activePlayer] += roundScore;
-
-//     // Change player to other player
-
-// })
-
-
- // if (dice !== '1') {
-    //     // Add score
-    //     roundScore += dice;
-    //     document.querySelector('#current-' + activePlayer).textContent = roundScore;
-
-    // } else if (dice === '1') {
-    //     //Next player
-    //     roundScore = 0;
-    //     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-
-
-    // }
