@@ -128,13 +128,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         currentRoll = dice1 + dice2;
 
 
-
-        // previousRoll = currentRoll;
-        // currentRoll = dice;
-
-        // console.log('The previous roll was ' + previousRoll);
-        // console.log('The current roll is ' + currentRoll);
-
         // 2. Display the dice1
         let diceDOM1 = document.getElementById('dice1');
         diceDOM1.style.display = 'block';
@@ -186,22 +179,10 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
                 document.getElementById('message1').style.display = 'none';
             }
 
-
-            // if active player rolls a one
-            // Previous roll and current roll resets to 0
-            // previousRoll = 0;
-            // currentRoll = 0;
-            // Displays a message that says you rolled a 1
-
         }
 
     }
 
-
-    // // If score of the active player is more than 100 and the roll dice button is clicked  // Start a new game
-    // if (scores[activePlayer] >= 10) {
-    //     newGame();
-    // }
 });
 
 // When hold button is pressed
@@ -244,7 +225,7 @@ function nextPlayer() {
     // Changes the active player
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
-    //
+    // If a you rolled one message is displayed - hide the message
     if (document.getElementById('message' + activePlayer).style.display === 'inline') {
         document.getElementById('message' + activePlayer).style.display = 'none'
     }
@@ -270,51 +251,3 @@ function resetName() {
 document.querySelector('.btn-new').addEventListener('click', newGame);
 
 
-/****************************************
-CODE CHALLENGES
-****************************************/
-
-//Challenge 1
-
-//1. Player rolls 6 
-// two variables - last roll  and current roll
-// current round score = current roll + last roll + any previous rolls
-//if previous roll === 6 && current roll === 6 // player score[activePlayer] = 0;  // DONE
-// if not then active score should be 
-//2. player rolls 6 again
-//3. Player loses all their score
-//
-
-
-
-
-
-
-
-
-
-
-// document.querySelector('#btn-hold').addEventListener('click', function () {
-//     // Figure out current player
-
-
-//     // Add scores to global score // score[0] or score[1]
-//     score[activePlayer] += roundScore;
-
-//     // Change player to other player
-
-// })
-
-
- // if (dice !== '1') {
-    //     // Add score
-    //     roundScore += dice;
-    //     document.querySelector('#current-' + activePlayer).textContent = roundScore;
-
-    // } else if (dice === '1') {
-    //     //Next player
-    //     roundScore = 0;
-    //     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-
-
-    // }
