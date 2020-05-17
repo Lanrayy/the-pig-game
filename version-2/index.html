@@ -7,7 +7,8 @@
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="style.css">
 
-    <title>Pig Game</title>
+    <title>The Pig Game Version 2
+    </title>
 </head>
 
 <body>
@@ -41,10 +42,11 @@
             </p>
             <p id="instructions-text">
                 - Enter the round score limit below. <br />
-                - Click "roll" to roll the die<br />
-                - If you roll a 1, you lose your turn & current score.<br />
-                - If you click "hold", your turn score is added to your total score.<br />
-                - Default score limit is 100. <br />
+                - Click "roll" to roll both dice<br />
+                - If either die is a 1, you lose your turn & turn score<br />
+                - If both die are 6 you lost your total & turn score <br />
+                - If you click "hold", your turn score is added to your total score<br />
+                - Default score limit is 100 <br />
 
             </p>
         </div>
@@ -59,22 +61,23 @@
         <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
         <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
 
-        <img src="dice-5.png" alt="Dice" class="dice" />
+        <img src="dice-5.png" alt="Dice" class="dice" id="dice1" />
+        <img src="dice-5.png" alt="Dice" class="dice" id="dice2" />
 
         <div id="madebylanray">
             <img id="madebylanray-logo" src="madebylanray-logo.png" alt="Made By Lanray Logo" />
             <p>Lanre Sodeinde</p>
         </div>
 
-        <p id="version-number">Version 1</p>
-
+        <p id="version-number">Version 2</p>
 
 
     </div>
 
     <!-- <script src="app.js"></script> -->
     <!-- <script src="challenge1.js"></script> -->
-    <script src="challenge2.js"></script>
+    <!-- <script src="challenge2.js"></script> -->
+    <script src="challenge3.js"></script>
 </body>
 
 </html>
